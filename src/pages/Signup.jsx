@@ -21,7 +21,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/signup",
+        "https://react-task-backend-8y9w.onrender.com/signup",
         formData
       );
       // console.log(response.data);

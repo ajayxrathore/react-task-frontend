@@ -17,7 +17,7 @@ export default function VerifyOtpPage() {
     }
     try {
       const email = sessionStorage.getItem("signupEmail");
-      const response = await axios.post("http://localhost:5000/verify-otp", {
+      const response = await axios.post("https://react-task-backend-8y9w.onrender.com/verify-otp", {
         mobileOtp,
         emailOtp,
         email,

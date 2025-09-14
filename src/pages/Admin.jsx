@@ -8,7 +8,7 @@ export default function Admin() {
   useEffect(() => {
     try {
       axios
-        .get("http://localhost:5000/admin")
+        .get("https://react-task-backend-8y9w.onrender.com/admin")
         .then((response) => {
           setUsers(response.data);
         })
