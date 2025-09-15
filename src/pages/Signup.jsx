@@ -24,7 +24,7 @@ export default function Signup() {
         "https://react-task-backend-8y9w.onrender.com/signup",
         formData
       );
-      console.log(response.data);
+    //   console.log(response.data);
       sessionStorage.setItem("signupEmail", response.data.email);
       sessionStorage.setItem("mobileOtp",response.data.mobileOtp);
       setFormData({
@@ -42,7 +42,7 @@ export default function Signup() {
         setErrorMessage("Failed to signup. Please try again.");
       }
     }
-    console.log(`formdata: ${formData}`);
+    // console.log(`formdata: ${formData}`);
   };
   return (
     <>
