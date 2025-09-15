@@ -21,6 +21,15 @@ export default function Admin() {
         const email = sessionStorage.getItem("signupEmail");
         if (email) {
           socket.emit("userOnline", email);
+          axios
+        .get("https://react-task-backend-8y9w.onrender.com/admin")
+        .then((response) => {
+          setUsers(response.data);
+        })
+        .catch((error) => {
+          //   console.error("Error fetching users", error);
+          setErrorMessage("Failed to fetch users. Please try again.");
+        });
         }
       });
       socket.on("updateUsers", (allmails) => {
